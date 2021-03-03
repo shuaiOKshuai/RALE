@@ -62,4 +62,4 @@ We present the datasets and code for our paper "Relative and Absolute Location E
 			All the classes should be split into train, val and test (each has its own file, e.g., file 'train-class-0', 'val-class-0' and 'test-class-0' are the 0-th split of classes for train, val and test, respectively). For example, in file 'test-class-0', each line is a class id of one class, and all the test classes (novel classes) are in this file.
 
 ## 5. Note
-The different distribution of the sampled classes may result in high standard deviation. Thus, for each data split, please run several times and average the results.
+	The different distribution of the sampled classes may result in high standard deviation. Thus, for each data split, please run several times and average the results.
