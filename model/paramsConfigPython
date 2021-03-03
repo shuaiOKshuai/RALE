@@ -1,0 +1,147 @@
+[param]
+
+###############################################################
+# params for the dataset and gpu
+###############################################################
+
+# root dir for datasets  
+root_dir = ../datasets/
+
+# dataset name
+dataset = amazon
+
+# the split of dataset, could be 0,1,2,3,4
+split_index = 0
+
+# gpu id
+gpu = 0
+
+###############################################################
+# params in the model
+###############################################################
+
+# ------- some parameters could be tuned -------
+
+# change this dropout rate for different datasets. Amazon: 0.4, Email and Reddit: 0.5
+dropout = 0.4
+
+# change the kshot for different settings
+kshot = 1
+
+# change the number of way for different datasets. Amazon: 2, Email and Reddit: 5
+nway = 2
+
+# for amazon and email, could be 50000; for larger dataset reddit, could be 80000
+train_batch_num = 50000
+
+# the learning rate of adaptation in each task. Amazon and Reddit: 5.0; Email: 0.2 (Email 1-shot: 0.5)
+inner_train_lr = 5.0
+
+# when train, set True; when test, set False
+ifTrain = True
+
+# for amazon and email, could be 10; for larger dataset reddit, could be 20
+patience = 10
+
+# fixed in our model, the adaptation time on support set, but could be further tuned
+update_times = 1
+
+# fixed in our model, the inner dim for the model, but this param could be further tuned
+inner_dim = 32
+
+# fixed in our model, the meta learning rate, but this param could be further tuned
+meta_lr = 1e-3
+
+
+# ------- some parameters do not need to be tuned (you can also change as you wish to suit your own data) -------
+
+# fixed, the max degree for dataset, to remove some neighbors for high degree nodes
+max_degree = 128
+
+# fixed, the max degree considered in the 1st-layer in GNN
+max_degree_1_order = 25
+
+# fixed, the max degree considered in the 2nd-layer in GNN
+max_degree_2_order = 10
+
+# fixed
+clip_by_norm = 10.0
+
+# fixed, the number of query in each way (class)
+kquery = 5
+
+# fixed, the number of tasks in each batch
+batch_size = 4
+
+# fixed, the number of batches to do validation
+val_epoch = 200
+
+# fixed, the number of validation batches
+val_batch_num = 300
+
+# fixed, the number of test batches
+test_batch_num = 600
+
+# fixed, head number of multi-head self-attention
+num_heads = 8
+
+# fixed, l2 coefficient of regularization
+l2_coef = 0.0000
+
+
+###############################################################
+# params in dataset precomputation
+###############################################################
+
+# ------- some parameters could be tuned -------
+
+# the sampling time per node
+samplingTimesPerNode = 200
+
+# path length for sampling
+samplingMaxLengthPerPath = 50
+
+# the max length for each segment between a node and a hub node, meaning the number of nodes in the segment
+maxLen_subpath_hub = 4
+
+# the max length for each connecting path (long path), meaning the number of nodes in the path
+maxLen_subpath = 7
+
+# discount factor for each subpath by length. We don't use this param in the model, but this param could be further tuned
+alpha = 0.0
+
+# the topk ratio for hub nodes selection
+hub_nodes_topk_ratio = 0.05
+
+
+# ------- some parameters do not need to be tuned -------
+
+# the batch size for random walk sampling
+sampling_batch_size = 100
+
+# the batch for paths when need to extract subpaths from them
+node_pairs_process_batch_size = 200
+
+# the min length for each subpath
+minLen_subpath = 2
+
+# the max number of subpaths when prepare the subpaths for choice from the set
+max_subpaths_num = 10
+
+# the set number of subpaths for each node pair
+subpaths_num_per_nodePair = 5
+
+# the ratio that direct subpaths in all subpaths
+subpaths_ratio = 0.9
+
+# the set batch size for data preparation into TFRecord, default = 500
+TFRecord_batch_sz = 1000
+
+# the prosess batch size for subpaths when save them by the node ids
+subpathsSaveByIdsBatchSz = 15000
+
+# the number of select hub nodes per support/query node
+select_hub_nodes_num_per_node = 10
+
+# the number of subpaths per hub node
+subpaths_num_per_hubnode = 5
