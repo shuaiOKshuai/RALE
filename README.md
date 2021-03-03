@@ -1,7 +1,7 @@
 
 # Relative and Absolute Location Embedding for Few-Shot Node Classification on Graph
 
-We present the datasets and code for our paper "Relative and Absolute Location Embedding for Few-Shot Node Classification on Graph", which is accepted by AAAI-21.
+We present the datasets and code for our paper "Relative and Absolute Location Embedding for Few-Shot Node Classification on Graph", which is published on AAAI-21.
 
 
 ## 1. Description for each file
@@ -36,11 +36,13 @@ We present the datasets and code for our paper "Relative and Absolute Location E
 
 ## 3. How to run
 	- (1) First configure the parameters in file paramsConfigPython
+		
 		--- precomputation (offline) ---
 	- (2) Run 'python3 preprocessPre.py', to random walk and generate the segments
 	- (3) Run 'python3 preprocessTrain.py', to generate the offline pipeline for training
 	- (4) Run 'python3 preprocessVal.py', to generate the offline pipeline for validation
 	- (5) Run 'python3 preprocessTest.py', to generate the offline pipeline for test
+		
 		--- model evaluation (online) ---
 	- (6) Run 'python3 mainEntry.py' for training and validation, here we should set 'ifTrain = True' (meaning for training) in file paramsConfigPython before run this command
 	- (7) Run 'python3 mainEntry.py' for test, here we should set 'ifTrain = False' (meaning for test) in file paramsConfigPython before run this command
