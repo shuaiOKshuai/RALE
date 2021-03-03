@@ -52,7 +52,7 @@ Note that, if you have already prepared the data (namely, the steps 1, 2, 3, 4 a
 
 ## 4. Datasets
 
-We include the Amazon and Email data in folder 'datasets'; while Reddit is too large so you can download it from link http://snap.stanford.edu/graphsage/, then you can use methods in 'preprocess_reddit.py' to process it into our format.
+We include the Amazon and Email data in folder 'datasets'; while Reddit is too large so you can download it from link http://snap.stanford.edu/graphsage/, then process it into our format.
 And you can also prepare your own datasets. The data format should be as follows,
 - (1) two files and a folder for class splits should be prepared: graph.node to describe the nodes, graph.edge to describe the edges, and datasets-splits to describe the class splits;
 - (2) node file ( graph.node )
