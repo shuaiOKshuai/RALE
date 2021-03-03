@@ -52,13 +52,13 @@ We present the datasets and code for our paper "Relative and Absolute Location E
 
 	We include the Amazon and Email data in folder 'datasets'; while Reddit is too large so you can download it from link http://snap.stanford.edu/graphsage/, then you can use methods in 'preprocess_reddit.py' to process it into our format.
 	And you can also prepare your own datasets. The data format is as follows,
-		(1) two files and a folder for class splits should be prepared: graph.node to describe the nodes, graph.edge to describe the edges, and datasets-splits to describe the class splits;
-		(2) node file ( graph.node )
+	- (1) two files and a folder for class splits should be prepared: graph.node to describe the nodes, graph.edge to describe the edges, and datasets-splits to describe the class splits;
+	- (2) node file ( graph.node )
 			The first row is the number of nodes + tab + the number of features
 			In the following rows, each row represents a node: the first column is the node_id, the second column is the label_id of the node, and the third to the last columns are the features of this node. All these columns should be split by tabs.
-		(3) edge file ( graph.edge )
+	- (3) edge file ( graph.edge )
 			Each row is a directed edge, for example : 'a tab b' means a->b. We can add another line 'b tab a' to represent this is a bidirection edge. All these values should be split by tabs.
-		(4) datasets-splits:
+	- (4) datasets-splits:
 			All the classes should be split into train, val and test (each has its own file, e.g., file 'train-class-0', 'val-class-0' and 'test-class-0' are the 0-th split of classes for train, val and test, respectively). For example, in file 'test-class-0', each line is a class id of one class, and all the test classes (novel classes) are in this file.
 
 ## 5. Note
