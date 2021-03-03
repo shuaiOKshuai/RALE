@@ -44,8 +44,8 @@ We present the datasets and code for our paper "Relative and Absolute Location E
 	- (5) Run 'python3 preprocessTest.py', to generate the offline pipeline for test
 		
 		--- model evaluation (online) ---
-	- (6) Run 'python3 mainEntry.py' for training and validation, here we should set 'ifTrain = True' (meaning for training) in file paramsConfigPython before run this command
-	- (7) Run 'python3 mainEntry.py' for test, here we should set 'ifTrain = False' (meaning for test) in file paramsConfigPython before run this command
+	- (6) Run 'python3 mainEntry.py' for training and validation, here we should set 'ifTrain = True' (meaning for training) in file paramsConfigPython before running this command
+	- (7) Run 'python3 mainEntry.py' for test, here we should set 'ifTrain = False' (meaning for test) in file paramsConfigPython before running this command
 	
 	Note that, if you have already prepared the data (namely, the steps 1, 2, 3, 4 and 5 are finished), the prepared data would be saved on the disk (may occupy some space, according to the graph size). Thus, you can directly run steps 6 and 7.
 	
@@ -64,4 +64,4 @@ We present the datasets and code for our paper "Relative and Absolute Location E
 			All the classes should be split into train, val and test (each has its own file, e.g., file 'train-class-0', 'val-class-0' and 'test-class-0' are the 0-th split of classes for train, val and test, respectively). For example, in file 'test-class-0', each line is a class id of one class, and all the test classes (novel classes) are in this file.
 
 ## 5. Note
-	The different distribution of the sampled classes may result in high standard deviation. Thus, for each data split, please run several times and average the results.
+	The different distribution of the sampled classes may result in high standard deviation. Thus, for each data split, please run several times and average the results.  
