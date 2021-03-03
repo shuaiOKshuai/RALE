@@ -65,3 +65,4 @@ We present the datasets and code for our paper "Relative and Absolute Location E
 
 ## 5. Note
 	The different distribution of the sampled classes may result in high standard deviation. Thus, for each data split, please run several times and average the results.  
+	
