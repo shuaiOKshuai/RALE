@@ -24,7 +24,7 @@ We present the datasets and code for our paper "Relative and Absolute Location E
 		- preprocessTest.py : offline pipeline generation for test
 		- prepareDatasetMatch2.py : the main functions of offline pipeline generation
 		- processTools.py : some tool functions
-		
+	RALE-AAAI-Appendix.pdf: Appendix file.
 		
 ## 2. Requirements (Environment)
 	python-3.6.5
