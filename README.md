@@ -2,7 +2,7 @@
 
 # Relative and Absolute Location Embedding for Few-Shot Node Classification on Graph
 
-We present the datasets and code for our paper "Relative and Absolute Location Embedding for Few-Shot Node Classification on Graph", which is published in AAAI-2021.
+We present the datasets and code for our paper "[Relative and Absolute Location Embedding for Few-Shot Node Classification on Graph](https://zemin-liu.github.io/papers/Relative%20and%20Absolute%20Location%20Embedding%20for%20Few-Shot%20Node%20Classification%20on%20Graph.pdf)", which is published in AAAI-2021.
 
 
 ## 1. Description for each file
