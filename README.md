@@ -67,7 +67,10 @@ And you can also prepare your own datasets. The data format should be as follows
 The different distribution of the different classes splits (to form the training, validation and test set) may result in high standard deviation. Thus, for each data split, please run several times and average the results. The final result (node classification accuracy) could be achieved by further averaging the results of all the 5 splits.
 
 
-## 6. Cite
+## 6. Acknowledgments
+This research/project is supported by the National Research Foundation, Singapore under its AI Singapore Programme (AISG Award No: AISG-RP-2018-001).
+
+## 7. Cite
 	@inproceedings{liu2021relative,
 		title = {Relative and Absolute Location Embedding for Few-Shot Node Classification on Graph},
 		author = {Liu, Zemin and Fang, Yuan and Liu, Chenghao and Hoi, Steven CH},
