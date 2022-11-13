@@ -64,7 +64,9 @@ And you can also prepare your own datasets. The data format should be as follows
 	- For example, in file 'test-class-0', each line is one class id, and all the test classes (novel classes) are in this file.
 
 ## 5. Note
-The different distribution of the different classes splits (to form the training, validation and test set) may result in high standard deviation. Thus, for each data split, please run several times and average the results. The final result (node classification accuracy) could be achieved by further averaging the results of all the 5 splits.
+- The different distribution of the different classes splits (to form the training, validation and test set) may result in high standard deviation. Thus, for each data split, please run several times and average the results. The final result (node classification accuracy) could be achieved by further averaging the results of all the 5 splits.
+
+- We use different main models for Amazon and Reddit (both of them share the same one), as well as Email. The main difference of them lies in the files of amazon_reddit_maml.py and email_maml.py. In particular, on Amazon and Reddit datasets, we use a one-layer GNN to calculate the node embeddings for further usage (such as to further calculate the path embeddings, etc.), and you can view lines 227 and 247 in file amazon_reddit_maml.py; on Email dataset, we use a two-layer GNN to calculate the node embeddings for further usage, and please check lines 236-237, and 259-260 in file email_maml.py. For your own usage, you can try these two models both (or either), since they mainly differ in the number of GNN layers for node embedding calculation.
 
 
 ## 6. Acknowledgments
